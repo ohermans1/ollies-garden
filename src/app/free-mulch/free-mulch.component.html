@@ -1,0 +1,29 @@
+<section class="free-mulch">
+  <h2 class="free-mulch__header">Where to find free mulch in Melbourne</h2>
+
+  <div class="free-mulch__map-container">
+    <iframe
+      class="free-mulch__map"
+      src="https://www.google.com.au/maps/d/u/0/embed?mid=1TJXRe7qz7ycNLagAI7i7jJCnnbjj9ZVY&ehbc=2E312F"
+      width="100%"
+      height="100%"
+      frameborder="0"
+    ></iframe>
+  </div>
+
+  <div class="free-mulch__card-container">
+    <div class="free-mulch__location-card" *ngFor="let location of locations">
+      <h3 class="free-mulch__card-header">{{ location.name }}</h3>
+      <p class="free-mulch__card-text">
+        {{ location.description }}
+      </p>
+      <a
+        href="{{ location.url }}"
+        class="free-mulch__card-link"
+        target="_blank"
+        rel="noopener "
+        >More info</a
+      >
+    </div>
+  </div>
+</section>

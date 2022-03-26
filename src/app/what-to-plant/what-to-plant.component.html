@@ -1,0 +1,34 @@
+<section class="what-to-plant">
+  <h2 class="what-to-plant__header">
+    What should I plant in {{ locationArray[0] }}?
+  </h2>
+  <h3 class="what-to-plant__secondary">
+    It's {{ month }} so you should plant...
+  </h3>
+  <p class="what-to-plant__paragraph">
+    Click the icons to buy seeds from my favourite online seed store |
+    <a
+      href="https://www.theseedcollection.com.au/"
+      rel="noopener"
+      target="_blank"
+      >www.theseedcollection.com.au</a
+    >
+  </p>
+
+  <div class="vegetable">
+    <a
+      class="vegetable__item"
+      *ngFor="let vegetable of thisMonthsArray"
+      href="{{ vegetable.url }}"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="{{ vegetable.imageURL }}"
+        alt="{{ vegetable.name }} icon"
+        class="vegetable__image"
+      />
+      <h4 class="vegetable__name">{{ vegetable.name }}</h4>
+    </a>
+  </div>
+</section>

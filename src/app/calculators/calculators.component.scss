@@ -1,0 +1,29 @@
+.calculator {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__secondary {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  &__individual {
+    width: 37.5rem;
+    margin: 2rem;
+    padding: 4rem;
+    background-color: var(--color-tertiary);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: var(--style-box-shadow);
+  }
+}

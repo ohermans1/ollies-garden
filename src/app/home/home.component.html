@@ -1,0 +1,37 @@
+<section class="home">
+  <h2 class="home__header">Welcome to Ollie's Garden!</h2>
+  <p class="home__paragraph">
+    Ollie's garden is a free gardening resource site for Aussies. I have created
+    the website for fun and I hop you enjoy it!
+  </p>
+  <p class="home__paragraph">
+    Check out our latest gardening resources below! Please be sure to come back
+    and visit in the future, as we are constantly updating and improving these
+    resources.
+  </p>
+  <p class="home__paragraph">
+    If you have any suggestions for anything we should add to the site, please
+    reach out using the contact form at the bottom of any page.
+  </p>
+  <div class="features">
+    <div class="features__card" *ngFor="let newFeature of newFeatures">
+      <div class="features__text">
+        <h3 class="features__heading">{{ newFeature.title }}</h3>
+        <p class="features__paragraph">{{ newFeature.info }}</p>
+      </div>
+      <div class="features__CTA">
+        <img
+          src="{{ newFeature.imageUrl }}"
+          alt="{{ newFeature.title }} Icon"
+          class="features__img"
+        />
+        <button
+          routerLink="{{ newFeature.routerLink }}"
+          class="features__button"
+        >
+          {{ newFeature.button }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
