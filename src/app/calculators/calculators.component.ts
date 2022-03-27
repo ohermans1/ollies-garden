@@ -8,5 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorsComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadScript('https://cdn.omnicalculator.com/sdk.js');
+  }
+
+  public loadScript(url: string) {
+    let node = document.createElement('script');
+    node.src = url;
+    node.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(node);
+  }
 }
