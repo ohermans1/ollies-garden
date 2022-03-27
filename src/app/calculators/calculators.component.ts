@@ -7,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorsComponent implements OnInit {
   constructor() {
-    if (!window.location.hash.includes('#ready')) {
-      window.location.href += '#ready';
-      window.location.reload();
-    }
+   
   }
 
   ngOnInit(): void {}

@@ -28,6 +28,7 @@
         <button
           routerLink="{{ newFeature.routerLink }}"
           class="features__button"
+          (click)="resetButton()"
         >
           {{ newFeature.button }}
         </button>

@@ -11,5 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  resetButton() {
+    const checkbox = document.querySelector(
+      '.nav__checkbox'
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+  }
 }

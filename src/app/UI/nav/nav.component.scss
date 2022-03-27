@@ -106,3 +106,8 @@
     transform: rotate(-45deg) translate(-5px, 5px);
   }
 }
+
+.activeLink {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+}

@@ -31,6 +31,13 @@ export class HomeComponent implements OnInit {
     ),
   ];
 
+  resetButton() {
+    const checkbox = document.querySelector(
+      '.nav__checkbox'
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

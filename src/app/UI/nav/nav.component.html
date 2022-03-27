@@ -4,14 +4,37 @@
     <a class="nav__mobile-menu-button"></a>
   </div>
   <div class="nav__container" [ngStyle]="{ display: getDisplay() }">
-    <a class="nav__link" routerLink="" (click)="showMenu()">Home</a>
-    <a class="nav__link" routerLink="/free-mulch" (click)="showMenu()"
+    <a
+      class="nav__link"
+      routerLink="/"
+      routerLinkActive="activeLink"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="showMenu()"
+      (click)="resetButton()"
+      >Home</a
+    >
+    <a
+      class="nav__link"
+      routerLink="/free-mulch"
+      routerLinkActive="activeLink"
+      (click)="showMenu()"
+      (click)="resetButton()"
       >Free Mulch</a
     >
-    <a class="nav__link" routerLink="/what-to-plant" (click)="showMenu()"
+    <a
+      class="nav__link"
+      routerLink="/what-to-plant"
+      routerLinkActive="activeLink"
+      (click)="showMenu()"
+      (click)="resetButton()"
       >What to Plant</a
     >
-    <a class="nav__link" routerLink="/calculators" (click)="showMenu()"
+    <a
+      class="nav__link"
+      routerLink="/calculators"
+      routerLinkActive="activeLink"
+      (click)="showMenu()"
+      (click)="resetButton()"
       >Garden Calculators</a
     >
   </div>

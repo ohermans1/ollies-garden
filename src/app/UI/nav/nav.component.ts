@@ -26,4 +26,11 @@ export class NavComponent implements OnInit {
   getDisplay() {
     return this.menuVisible === true ? 'flex' : 'none';
   }
+
+  resetButton() {
+    const checkbox = document.querySelector(
+      '.nav__checkbox'
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+  }
 }
