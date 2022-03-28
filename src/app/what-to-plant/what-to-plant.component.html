@@ -3,8 +3,8 @@
     What should I plant in {{ locationArray[0] }}?
   </h2>
   <h3 class="what-to-plant__secondary">
-    <!-- It's {{ month }} so you should plant... -->
-    It's
+    <!-- It's -->
+    {{ text1 }}
     <select
       name="month"
       id="monthSelector"
@@ -19,7 +19,8 @@
         {{ month }}
       </option>
     </select>
-    so you should plant...
+    <!-- so you should plant... -->
+    {{ text2 }}
   </h3>
   <p class="what-to-plant__paragraph">
     Click the icons to buy seeds from my favourite online seed store |

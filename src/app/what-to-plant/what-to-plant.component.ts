@@ -771,6 +771,7 @@ export class WhatToPlantComponent implements OnInit {
   locationArray = ['Melbourne'];
 
   monthNumber = new Date().getMonth();
+  currentMonth = this.monthArray[this.monthNumber];
   month = this.monthArray[this.monthNumber];
 
   thisMonthsArray = this.vegetables.filter((vegetable) =>
@@ -784,8 +785,18 @@ export class WhatToPlantComponent implements OnInit {
     return false;
   }
 
+  text1: string = "It's ";
+  text2: string = ' so you should plant...';
   changeMonth(e: any) {
-    this.month = e.target[e.target.selectedIndex].text;
+    let monthValue = e.target[e.target.selectedIndex].text;
+    if (monthValue !== this.currentMonth) {
+      this.text1 = 'In ';
+      this.text2 = ' you can plant...';
+    } else {
+      this.text1 = "It's ";
+      this.text2 = ' so you should plant...';
+    }
+    this.month = monthValue;
     this.thisMonthsArray = this.vegetables.filter((vegetable) =>
       vegetable.month.includes(this.month)
     );
