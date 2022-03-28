@@ -3,7 +3,23 @@
     What should I plant in {{ locationArray[0] }}?
   </h2>
   <h3 class="what-to-plant__secondary">
-    It's {{ month }} so you should plant...
+    <!-- It's {{ month }} so you should plant... -->
+    It's
+    <select
+      name="month"
+      id="monthSelector"
+      class="what-to-plant__select"
+      (change)="changeMonth($event)"
+    >
+      <option
+        value="{{ month }}"
+        *ngFor="let month of monthArray"
+        [selected]="setSelected(month)"
+      >
+        {{ month }}
+      </option>
+    </select>
+    so you should plant...
   </h3>
   <p class="what-to-plant__paragraph">
     Click the icons to buy seeds from my favourite online seed store |

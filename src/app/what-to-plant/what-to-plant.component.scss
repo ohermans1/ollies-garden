@@ -12,6 +12,19 @@
   &__paragraph {
     font-size: 1.2rem;
   }
+
+  &__select {
+    border: none;
+    border-bottom: 3px solid var(--color-tertiary);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-bottom: 3px solid var(--color-tertiary-dark);
+    }
+  }
 }
 
 .vegetable {

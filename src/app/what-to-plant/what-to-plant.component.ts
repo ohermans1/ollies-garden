@@ -777,4 +777,17 @@ export class WhatToPlantComponent implements OnInit {
     vegetable.month.includes(this.month)
   );
 
+  setSelected(ngMonth: string) {
+    if (ngMonth === this.month) {
+      return true;
+    }
+    return false;
+  }
+
+  changeMonth(e: any) {
+    this.month = e.target[e.target.selectedIndex].text;
+    this.thisMonthsArray = this.vegetables.filter((vegetable) =>
+      vegetable.month.includes(this.month)
+    );
+  }
 }
